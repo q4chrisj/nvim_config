@@ -65,18 +65,9 @@ return {
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
         -- overriding these in harpoon
-        ["<C-h>"] = { false, desc = "Disable" },
-        ["<C-l>"] = { false, desc = "Disable" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-        -- ["<Leader>a"] = { harpoon.list.add_file() },
-        -- ["<C-e>"] = { function() require("harpoon"):ui():toggle_quick_menu() end },
-        -- ["<C-h>"] = { function() require("harpoon").ui.nav_file(1) end },
-        -- ["<C-j>"] = { function() ui.nav_file(2) end },
-        -- ["<C-k>"] = { function() ui.nav_file(3) end },
-        -- ["<C-l>"] = { function() ui.nav_file(4) end },
+        ["<C-h>"] = { function() return false end, desc = "Disable" },
+        ["<C-l>"] = { function() return false end, desc = "Disable" },
         ["<Leader>rr"] = { "<cmd>RustRun!<cr>" },
-        ["<Leader>nwn"] = { ":Neorg workspace notes<CR>" },
         ["<Leader>mp"] = { ":Glow<CR>" },
       },
       t = {
@@ -84,7 +75,6 @@ return {
         -- ["<esc>"] = false,
       },
       v = {
-
         ["J"] = { ":m '>+1<CR>gv==kgvo<esc>=kgvo" },
         ["K"] = { ":m '<-2<CR>gv==jgvo<esc>=jgvo" },
       },
