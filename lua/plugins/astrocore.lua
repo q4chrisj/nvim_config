@@ -69,6 +69,7 @@ return {
         ["<C-l>"] = { function() return false end, desc = "Disable" },
         ["<Leader>rr"] = { "<cmd>RustRun!<cr>" },
         ["<Leader>mp"] = { ":Glow<CR>" },
+        ["<Leader>dn"] = { ":NoiceDismiss<CR>" },
       },
       t = {
         -- setting a mapping to false will disable it
